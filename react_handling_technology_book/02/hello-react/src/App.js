@@ -1,7 +1,7 @@
-/* import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
-function App() {
+/* function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -22,12 +22,17 @@ function App() {
   );
 } */
 
-function App(){
+function App() {
   const name = '리액트';
-  return(
+  return (
     <>
-      <h1>{name} 안녕!</h1>
-      <h2>잘 작동하니?</h2>
+      {/* 주석은 이렇게 작성합니다. */}
+      <div
+        className="react" // 시작 태그를 여러 줄로 작성하게 된다면 여기에 주석을 작성할 수 있습니다.
+      >
+        {name}
+      </div>
+      <input />
     </>
   );
 }
