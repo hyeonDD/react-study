@@ -15,3 +15,7 @@
 ## flex 속성
 
 [설명자료](https://flexboxfroggy.com/#ko)</br>
+
+## useActions 유틸 Hook
+
+[useActions 공식문서 링크](https://react-redux.js.org/next/api/hooks#recipe-useactions)</br>
