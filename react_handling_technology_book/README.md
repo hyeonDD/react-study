@@ -19,3 +19,7 @@
 ## useActions 유틸 Hook
 
 [useActions 공식문서 링크](https://react-redux.js.org/next/api/hooks#recipe-useactions)</br>
+
+## Loadable Components 공식문서
+
+[Loadable Components 공식문서 링크](https://loadable-components.com/docs/delay/)</br>
