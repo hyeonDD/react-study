@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeField, initializeForm, login } from '../../modules/auth';
 import AuthForm from '../../components/auth/AuthForm';
 import { check } from '../../modules/user';
 import { useNavigate } from 'react-router-dom';
 
-const LoginForm = ({ history }) => {
+const LoginForm = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { form, auth, authError, user } = useSelector(({ auth, user }) => ({
@@ -56,6 +56,11 @@ const LoginForm = ({ history }) => {
   useEffect(() => {
     if (user) {
       navigate('/');
+    }
+    try {
+      localStorage.setItem('user', JSON.stringify(user));
+    } catch (e) {
+      console.log('localStorage is not working');
     }
   }, [navigate, user]);
 
