@@ -1,15 +1,15 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import palette from '../../lib/styles/palette';
 
-const StyledButton = styled.button`
+const buttonStyle = css`
   border: none;
   border-radius: 4px;
   font-size: 1rem;
   font-weight: bold;
   padding: 0.25rem 1rem;
   color: white;
-  outline: none;
   outline: none;
   cursor: pointer;
 
@@ -35,21 +35,28 @@ const StyledButton = styled.button`
         background: ${palette.cyan[4]};
       }
     `}
+
+    &:disabled {
+    background: ${palette.gray[3]};
+    color: ${palette.gray[5]};
+    cursor: not-allowed;
+  }
 `;
 
-const Button = ({ to, history, ...rest }) => {
-  const navigate = useNavigate();
+const StyledButton = styled.button`
+  ${buttonStyle}
+`;
 
-  const onClick = (e) => {
-    // to가 있다면 to로 페이지 이동
-    if (to) {
-      navigate(to);
-    }
-    if (rest.onClick) {
-      rest.onClick(e);
-    }
-  };
-  return <StyledButton {...rest} onClick={onClick} />;
+const StyledLink = styled(Link)`
+  ${buttonStyle}
+`;
+
+const Button = (props) => {
+  return props.to ? (
+    <StyledLink {...props} cyan={props.cyan ? 1 : 0} />
+  ) : (
+    <StyledButton {...props} />
+  );
 };
 
 export default Button;
