@@ -23,3 +23,7 @@
 ## Loadable Components 공식문서
 
 [Loadable Components 공식문서 링크](https://loadable-components.com/docs/delay/)</br>
+
+## TypeScript, UI 테스팅 저자 블로그
+
+[velopert 블로그](https://velog.io/@velopert)</br>
