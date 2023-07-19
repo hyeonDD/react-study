@@ -1,7 +1,7 @@
 # react_study
 react공부 저장소
 
-[강의링크](https://www.youtube.com/watch?v=nahwuaXmgt8&list=PLfLgtT94nNq1e6tr4sm2eH6ZZC2jcqGOy&index=2)
+책이름: 리엑트 다루는 기술
 
 ## node, npm 버전
 
